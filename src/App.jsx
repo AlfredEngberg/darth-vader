@@ -27,7 +27,9 @@ function App() {
         setData([])
         return
       }
-      await fetch(`${import.meta.env.VITE_API_URL}lat=${lat}&lon=${long}&appid=${import.meta.env.VITE_API_KEY}`)
+      // https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+      const URL = `${import.meta.env.VITE_API_URL}lat=${lat}&lon=${long}&appid=${import.meta.env.VITE_API_KEY}`
+      await fetch(URL)
         .then(res => res.json())
         .then(result => {
           setData(result)
@@ -42,11 +44,11 @@ function App() {
   // datum formattering https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 
   return (
-    <main>
+    <main class="container">
       <header>
         <h1>DARTH VÄDER</h1>
       </header>
-      <article>
+      <article class='card'>
         {(typeof data.main !== 'undefined') ? (
           <div>
             <h2>{data.name}</h2>
@@ -59,6 +61,9 @@ function App() {
           <Spinner />
         )}
       </article>
+      <footer>
+        <p>github: <a href="https://github.com/AlfredEngberg">AlfredEngberg</a></p>
+      </footer>
     </main>
   )
 }
