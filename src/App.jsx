@@ -28,7 +28,7 @@ function App() {
         return
       }
       // https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
-      const URL = `${import.meta.env.VITE_API_URL}lat=${lat}&lon=${long}&appid=${import.meta.env.VITE_API_KEY}`
+      const URL = `${import.meta.env.VITE_API_URL}lat=${lat}&lon=${long}&appid=${import.meta.env.VITE_API_KEY}&units=metric`
       await fetch(URL)
         .then(res => res.json())
         .then(result => {
@@ -44,13 +44,13 @@ function App() {
   // datum formattering https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 
   return (
-    <main class="container">
+    <main>
       <header>
-        <h1>DARTH VÄDER</h1>
+        <h1>Puffes Väder</h1>
       </header>
-      <article class='card'>
+      <article class='weather-card container'>
         {(typeof data.main !== 'undefined') ? (
-          <div>
+          <div class="card">
             <h2>{data.name}</h2>
             <p>Temprature: {data.main.temp}</p>
             <p>Sunrise: {data.sys.sunrise}</p>
