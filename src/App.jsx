@@ -46,13 +46,19 @@ function App() {
   return (
     <main>
       <header>
-        <h1>Puffes Väder</h1>
-      </header>
+        <nav>
+          <h1><a href="/">Puffes Weather</a></h1>
+          <ul>
+            <li class="button"><a href="/om.html">about</a></li>
+            <li class="button"><a href="/kontakt.html">contact</a></li>
+          </ul>
+        </nav>
+      </header> 
       <article class='weather-card container'>
         {(typeof data.main !== 'undefined') ? (
           <div class="card">
             <h2>{data.name}</h2>
-            <p>Temprature: {data.main.temp}</p>
+            <p>Temprature: {data.main.temp}°C</p>
             <p>Sunrise: {data.sys.sunrise}</p>
             <p>Sunset: {data.sys.sunset}</p>
             <p>Description: {data.weather[0].description}</p>

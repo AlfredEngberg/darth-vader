@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/App.css">
+    <link rel="stylesheet" href="/src/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div id="root"></div>
+        <header>
+            <nav>
+                
+                <h1><a href="/">Puffes Weather</a></h1>
+                <div class="button-nav">
+                    <ul>
+                        <li class="button"><a href="/om.html">about</a></li>
+                        <li class="button"><a href="/kontakt.html">contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="topnav">
+                    <a href="#home" class="active"></a>
+                    <div id="myLinks">
+                        <a href="/index.html">Home</a>
+                        <a href="/om.html">About</a>
+                        <a href="/kontakt.html">Contact</a>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <article class="card about container">
+            <h1>About</h1>
+            <p>Dis iz a website built ta provide ‘da kurrent weatha uv yer kurrent location. Our goal ere iz ta provide
+                'da weatha so ya kan plan yer next attack on 'da 'umiez.</p>
+        </article>
+        <footer>
+            <p>github: <a href="https://github.com/AlfredEngberg">AlfredEngberg</a></p>
+        </footer>
+    </main>
+</body>
+
+<script>
+    function toggleMenu() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+</html>
