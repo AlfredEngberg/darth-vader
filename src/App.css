@@ -10,7 +10,7 @@
 
   --color-bright: #ecc32c;
   --color-text: #811e25;
-  --color-light-shadow: #498a34;
+  --color-light-shadow: #3d9121;
   --color-shadow: #736949;
   --color-dark: #1a1a1a;
   --rounded-corners: 1ch;
@@ -59,8 +59,8 @@ nav {
 
 .button {
   margin: var(--step-0);
-  background-color: var(--color-light-shadow);
-  color: var(--color-text);
+  background-color: var(--color-text);
+  color: var(--color-bright);
   padding: var(--step-0);
   border-radius: var(--rounded-corners);
   text-decoration: none;
@@ -71,7 +71,7 @@ nav {
 }
 
 .button a {
-  color: var(--color-text);
+  color: var(--color-bright);
   padding: 0;
   text-decoration: none;
 }
@@ -90,6 +90,10 @@ nav {
 }
 
 .about {
+  margin: var(--step-5);
+}
+
+.contact {
   margin: var(--step-5);
 }
 

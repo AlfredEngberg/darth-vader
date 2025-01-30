@@ -48,12 +48,20 @@ function App() {
       <header>
         <nav>
           <h1><a href="/">Puffes Weather</a></h1>
-          <ul>
-            <li class="button"><a href="/om.html">about</a></li>
-            <li class="button"><a href="/kontakt.html">contact</a></li>
-          </ul>
+          <div class="button-nav">
+            <ul class="nav-menu">
+              <li class="button nav-item"><a href="/om.html">about</a></li>
+              <li class="button nav-item"><a href="/kontakt.html">contact</a></li>
+            </ul>
+          </div>
+
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </nav>
-      </header> 
+      </header>
       <article class='weather-card container'>
         {(typeof data.main !== 'undefined') ? (
           <div class="card">
