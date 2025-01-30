@@ -18,25 +18,19 @@
         <div id="root"></div>
         <header>
             <nav>
-                
+
                 <h1><a href="/">Puffes Weather</a></h1>
                 <div class="button-nav">
-                    <ul>
-                        <li class="button"><a href="/om.html">about</a></li>
-                        <li class="button"><a href="/kontakt.html">contact</a></li>
+                    <ul class="nav-menu">
+                        <li class="button nav-item"><a href="/om.html">about</a></li>
+                        <li class="button nav-item"><a href="/kontakt.html">contact</a></li>
                     </ul>
                 </div>
 
-                <div class="topnav">
-                    <a href="#home" class="active"></a>
-                    <div id="myLinks">
-                        <a href="/index.html">Home</a>
-                        <a href="/om.html">About</a>
-                        <a href="/kontakt.html">Contact</a>
-                    </div>
-                    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-                        <i class="fa fa-bars"></i>
-                    </a>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </nav>
         </header>
@@ -52,14 +46,23 @@
 </body>
 
 <script>
-    function toggleMenu() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-            x.style.display = "none";
-        } else {
-            x.style.display = "block";
-        }
-    }
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const container = document.querySelector('.container');
+
+    hamburger.addEventListener('click', () => {
+        console.log('clicked');
+        hamburger.classList.toggle('active');
+        container.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(n => n.
+        addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            container.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
 </script>
 
 </html>
