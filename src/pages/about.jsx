@@ -1,0 +1,45 @@
+export function About() {
+    return (
+        <main>
+            <div></div>
+            <header>
+                <nav>
+                    <h1><a href="/">Puffes Weather</a></h1>
+                    <div class="button-nav">
+                        <ul class="nav-menu">
+                            <li class="button nav-item"><a href="/om.html">about</a></li>
+                            <li class="button nav-item"><a href="/kontakt.html">contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
+            </header>
+            <article class="card about container">
+                <h1>Welcome ta puffes weather!</h1>
+                <p>Puffes weatha iz a passionate weatha enthusiast dedicated ta bring'n yer accurate, real-time forecasts,
+                    insightful weatha analysis, an storm track'n updates. Wit' a deep love for meteorology an years uv
+                    'perience study'n weatha patterns, ma goal iz ta provide yer wit' reliable information ta help yer plan
+                    yer day, stay safe, an understand da science behind da skiez.</p>
+
+                <p>At puffes weather, you’ll find:</p>
+                <p>🌦 Daily & weekly forecasts – stay prepared wit' up-to-date weatha reports.</p>
+                <p>⛈ Severe weatha alerts – get timely notifications on storms, hurricanes, an 'treme weatha events.</p>
+                <p>🌍 Climate & weatha insights – learn about global weatha trends an' 'da science behind atmospheric
+                    changes.</p>
+                <p>📡 Radar & satellite maps – track weatha movements 'n real time.</p>
+                <p>Whetha ya're a kasual weatha watcher, an outdoor enthusiast, or someone 'oo jus wants ta know if dey
+                    need an umbrella, i’m ere ta make sure ya get da most accurate an user-friendly weatha updates
+                    possible.</p>
+                <p>Danks for visiting, an' stay weather-wise!</p>
+            </article>
+            <footer>
+                <p>github: <a href="https://github.com/AlfredEngberg">AlfredEngberg</a></p>
+            </footer>
+        </main>
+    )
+}
