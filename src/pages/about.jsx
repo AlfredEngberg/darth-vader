@@ -1,24 +1,9 @@
+import Navbar from '../components/Navbar';
+
 export function About() {
     return (
         <main>
-            <div></div>
-            <header>
-                <nav>
-                    <h1><a href="/">Puffes Weather</a></h1>
-                    <div class="button-nav">
-                        <ul class="nav-menu">
-                            <li class="button nav-item"><a href="/om.html">about</a></li>
-                            <li class="button nav-item"><a href="/kontakt.html">contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                </nav>
-            </header>
+            <Navbar></Navbar>
             <article class="card about container">
                 <h1>Welcome ta puffes weather!</h1>
                 <p>Puffes weatha iz a passionate weatha enthusiast dedicated ta bring'n yer accurate, real-time forecasts,

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import '../App.css'
 import Spinner from '../components/Spinner'
+import Navbar from '../components/Navbar';
 
 export function Home() {
     const [lat, setLat] = useState([])
@@ -45,23 +46,7 @@ export function Home() {
 
     return (
         <main>
-            <header>
-                <nav>
-                    <h1><a href="/">Puffes Weather</a></h1>
-                    <div class="button-nav">
-                        <ul class="nav-menu">
-                            <li class="button nav-item"><a href="/om.html">about</a></li>
-                            <li class="button nav-item"><a href="/kontakt.html">contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                </nav>
-            </header>
+            <Navbar></Navbar>
             <article class='weather-card container'>
                 {(typeof data.main !== 'undefined') ? (
                     <div class="card">

@@ -1,25 +1,10 @@
+import React from 'react';
+import Navbar from '../components/Navbar';
+
 export function Contact() {
     return (
         <main>
-            <div></div>
-            <header>
-                <nav>
-
-                    <h1><a href="/">Puffes Weather</a></h1>
-                    <div class="button-nav">
-                        <ul class="nav-menu">
-                            <li class="button nav-item"><a href="/om.html">about</a></li>
-                            <li class="button nav-item"><a href="/kontakt.html">contact</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </div>
-                </nav>
-            </header>
+            <Navbar></Navbar>
             <article class="card contact container">
                 <h1>kontact</h1>
                 <p>I’d love ta hear from ya! whetha ya have a question, a business inquiry, or jus want ta say hello, feel
